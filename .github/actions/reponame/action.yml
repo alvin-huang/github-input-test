@@ -1,0 +1,12 @@
+name: "Hello World"
+description: "print repo"
+inputs:
+  repo: # id of input
+    description: "reponame"
+    required: true
+    default: ${{ github.repository_owner }}
+runs:
+  using: "composite"
+  steps:
+    - run: "echo reponame is: ${{ inputs.repo }}"
+      shell: bash

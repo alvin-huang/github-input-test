@@ -1,0 +1,10 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: print reponame
+    steps:
+      - uses: actions/checkout@v3
+      - id: foo
+        uses: ./.github/actions/reponame
